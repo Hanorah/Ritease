@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ritease
 
-## Getting Started
+## Setup and Running Instructions
 
-First, run the development server:
+### Prerequisites
+Ensure you have the following installed on your machine:
+- [Node.js]
+- [Yarn]
+- [Git]
 
-```bash
-npm run dev
+### Installation
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/Hanorah/Ritease.git
+   cd Ritease
+   ```
+2. Install dependencies:
+   ```sh
+   yarn install  
+   # or
+   npm install
+   ```
+3. Start the development server:
+   ```sh
+   yarn dev  
+   # or
+   npm run dev
+   ```
+4. Open your browser and visit `http://localhost:3000`
+
+### Building for Production
+To create a production build:
+```sh
+yarn build
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To start the production server:
+```sh
+yarn start
+# or
+npm run start
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Libraries and Tools Used
+### Main Framework:
+- **Next.js**: Used for server-side rendering, routing, and performance optimizations.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### UI & Styling:
+- **Tailwind CSS**: For fast and responsive styling.
 
-## Learn More
+### PDF Handling:
+- **PDF-Lib**: Used to manipulate and annotate PDFs.
 
-To learn more about Next.js, take a look at the following resources:
+### State Management:
+- **React Hooks (useState, useEffect)**: For managing component states.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Challenges Faced & Solutions
+1. **PDF Annotation Implementation**:
+   - Challenge: Handling text placement and embedding fonts correctly.
+   - Solution: Used `pdf-lib` to embed fonts and accurately position annotations.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Responsive Design**:
+   - Challenge: Ensuring a smooth experience on both mobile and desktop.
+   - Solution: Used `flexbox` and `@media queries` in Tailwind CSS.
 
-## Deploy on Vercel
+3. **Git Issues**:
+   - Challenge: Pushing the initial commit and linking with GitHub.
+   - Solution: Used `git push --set-upstream origin main` to set up the remote branch correctly.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Features to Add if Given More Time
+1. **Text Highlighting & Drawing Annotations**: Expanding beyond simple text annotations.
+2. **Cloud Storage Integration**: Allow users to save and retrieve PDFs from a cloud service.
+3. **User Authentication**: Implement authentication so users can manage their own annotated PDFs.
+4. **Export to Different Formats**: Allow users to export PDFs to images or Word documents.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
